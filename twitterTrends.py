@@ -44,10 +44,10 @@ common_world_kolkata = world_trends_set.intersection(kolkata_trends_set)
 common_world_chennai = world_trends_set.intersection(chennai_trends_set)
 common_world_bangalore = world_trends_set.intersection(bangalore_trends_set)
 
-print common_world_mumbai
-print common_world_delhi
-print common_world_pune
-print common_world_jaipur
-print common_world_kolkata
-print common_world_chennai
-print common_world_bangalore
+print 'Mumbai:', common_world_mumbai
+print 'Delhi:', common_world_delhi
+print 'Pune:', common_world_pune
+print 'Jaipur:', common_world_jaipur
+print 'Kolkata:', common_world_kolkata
+print 'Chennai:', common_world_chennai
+print 'Bangalore:', common_world_bangalore
