@@ -5,11 +5,13 @@ import json
 
 auth = twitter.oauth.OAuth('1100686363-6JxQIno5T8UMPQeWyaH783qrxxJJrmwbLJCEtoF', 'GqgnME3MRfOQL79TzWuH5S9fJOgXXogdAwyVDzGSk4ovD', 'mDkejxEBQYTj99RNkYhc1mCTE', 'WR2xlMAu4gRelaPRDkywDXCAGldZOZT6u4AymUBE0MpyjtooCg')
 
+# auth = twitter.oauth.OAuth('1100686363-fMLVUMcRav8V9lIGWEl5P2cAXLBnsaPZN3sbF7g', '4a7YvS6syULB3xe0h4MhmzfZQag6spC0mkf936BNaLyEP', '0zBKsSyl3R3gaP99ghAPumj91', '3LUtqtVmqTTjYJBHklEIQx38HTjsbhdICldDvq18Bggv5pgRFb')
+
 twitter_api = twitter.Twitter(auth=auth)
 
 world_woeid = 1
 mumbai_woeid = 2295411
-delhi_woeid = 2295019
+delhi_woeid = 28743736
 pune_woeid = 2295412
 jaipur_woeid = 2295401
 kolkata_woeid = 2295386
@@ -34,7 +36,7 @@ pune_trends_set = set([trend['name'] for trend in pune_trends[0]['trends']])
 jaipur_trends_set = set([trend['name'] for trend in jaipur_trends[0]['trends']])
 kolkata_trends_set = set([trend['name'] for trend in kolkata_trends[0]['trends']])
 chennai_trends_set = set([trend['name'] for trend in chennai_trends[0]['trends']])
-bangalore_trends_set = set([trend['name'] for trend in bangaloretrends[0]['trends']])
+bangalore_trends_set = set([trend['name'] for trend in bangalore_trends[0]['trends']])
 
 common_world_mumbai = world_trends_set.intersection(mumbai_trends_set)
 common_world_delhi = world_trends_set.intersection(delhi_trends_set)
@@ -44,10 +46,43 @@ common_world_kolkata = world_trends_set.intersection(kolkata_trends_set)
 common_world_chennai = world_trends_set.intersection(chennai_trends_set)
 common_world_bangalore = world_trends_set.intersection(bangalore_trends_set)
 
-print 'Mumbai:', common_world_mumbai
-print 'Delhi:', common_world_delhi
-print 'Pune:', common_world_pune
-print 'Jaipur:', common_world_jaipur
-print 'Kolkata:', common_world_kolkata
-print 'Chennai:', common_world_chennai
-print 'Bangalore:', common_world_bangalore
+print '\n world_trends:'
+for item in  world_trends_set:
+	if '#' in item:	print item,
+
+print '\n mumbai_trends:'
+for item in  mumbai_trends_set:
+	if '#' in item:	print item,
+
+print '\n delhi_trends:'
+for item in  delhi_trends_set:
+	if '#' in item:	print item,
+
+print '\n pune_trends:'
+for item in  pune_trends_set:
+	if '#' in item:	print item,
+
+print '\n jaipur_trends:'
+for item in  jaipur_trends_set:
+	if '#' in item:	print item,
+
+print '\n kolkata_trends:'
+for item in  kolkata_trends_set:
+	if '#' in item:	print item,
+
+print '\n chennai_trends:'
+for item in  chennai_trends_set:
+	if '#' in item:	print item,
+
+print '\n bangalore_trends:'
+for item in  bangalore_trends_set:
+	if '#' in item:	print item,
+
+for item in common_world_mumbai : print '\n Mumbai:', item+','
+for item in common_world_delhi: print '\n Delhi:', item+',' 
+for item in common_world_pune: print '\n Pune:', item+',' 
+for item in common_world_jaipur: print '\n Jaipur:', item+',' 
+for item in common_world_kolkata: print '\n Kolkata:', item+','
+for item in common_world_chennai: print '\n Chennai:', item+',' 
+for item in common_world_bangalore: print '\n Bangalore:', item+',' 
+
