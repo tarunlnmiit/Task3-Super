@@ -48,12 +48,12 @@ common_world_bangalore = world_trends_set.intersection(bangalore_trends_set)
 
 trends = {'World': world_trends_set, 'Mumbai': mumbai_trends_set, 'Pune': pune_trends_set, 'Jaipur': jaipur_trends_set , 'Kolkata': kolkata_trends_set, 'Chennai': chennai_trends_set, 'Bangalore': bangalore_trends_set}
 
-print '\n world_trends:'
-for item in  World_trends_set:
+print '\n World_trends:'
+for item in world_trends_set:
 	if '#' in item:	print item,
 
-print '\n mumbai_trends:',
-for item in  Mumbai_trends_set:
+print '\n Mumbai_trends:',
+for item in mumbai_trends_set:
 	if '#' in item:	print item,
 
 # print '\n Delhi_trends:'
@@ -94,13 +94,5 @@ for i in xrange(len(key)):
 				if '#'in item:
 					print item, 
 		else:
-			print 'Nothing Common'
+			print 'None'
 		print
-
-# for item in common_world_mumbai : print '\n Mumbai:', item+','
-# for item in common_world_delhi: print '\n Delhi:', item+',' 
-# for item in common_world_pune: print '\n Pune:', item+',' 
-# for item in common_world_jaipur: print '\n Jaipur:', item+',' 
-# for item in common_world_kolkata: print '\n Kolkata:', item+','
-# for item in common_world_chennai: print '\n Chennai:', item+',' 
-# for item in common_world_bangalore: print '\n Bangalore:', item+',' 
